@@ -18,20 +18,44 @@ repositories {
 }
 
 dependencies {
-    // Web
+    // lombok 의존성
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Springboot 의존성
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-    // Test
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // AOP 의존성 (TimeTrace/TimeAspect 실행 시간 로깅용)
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
 
-    // DataBase
+    // JPA 의존성
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // 프로그램 테스트 의존성
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // MySQL 의존성
     runtimeOnly 'com.mysql:mysql-connector-j'
 
-    // Swagger openapi-ui
+    // Swagger 의존성
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.1'
+
+    // SpringSecurity 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // JWT 의존성
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6'
+
+    // Validation 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // JUnit 5 테스트 코드를 실행하기 위한 엔진
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // GPT API 의존성
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
 }
 
 tasks.named('test') {
