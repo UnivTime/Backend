@@ -1,7 +1,7 @@
 package com.UnivTime.global.exception;
 
-import likelion.practicespringboot.global.common.BaseResponse;
-import likelion.practicespringboot.global.exception.model.BaseErrorCode;
+import com.UnivTime.global.common.BaseResponse;
+import com.UnivTime.global.exception.model.BaseErrorCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;

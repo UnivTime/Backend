@@ -1,6 +1,6 @@
 package com.UnivTime.global.exception;
 
-import likelion.practicespringboot.global.exception.model.BaseErrorCode;
+import com.UnivTime.global.exception.model.BaseErrorCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
